@@ -5,6 +5,72 @@
 	<title>JS test</title>
 </head>
 <body>
+
+<div id="forma">
 	<h1>Welcome!</h1>
+
+	<label for="input-ime">Ime</label>
+	<input id="input-ime" type="text">
+	<br>
+	<br>
+	<label for="input-prezime">Prezime</label>
+	<input id="input-prezime" type="text">
+
+	<br>
+	<br>
+
+	<button onclick="ispisiIme()">Posalji</button>
+
+	<div id="qwe" style="display: none;">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima dolore molestiae laborum sed eaque quaerat laboriosam odio officiis enim, doloribus, obcaecati, modi sint repellat eius necessitatibus et deleniti odit. Non.</p>
+	</div>
+</div>
+
+
+	<h1 id="naslov"></h1>
+
+	<script>
+
+	function ispisiIme() {
+		var ime = document.getElementById('input-ime').value;
+		var prezime = document.getElementById('input-prezime').value;
+		var poruka = "Cao, " + ime + " " + prezime;
+		
+		document.getElementById('naslov').innerHTML = poruka;
+		document.getElementById('forma').style.display = 'none';
+		document.getElementById('qwe').style.display = 'block';
+	}
+
+	function nazivFunkcije() {
+		console.log('qweqwe');
+	}
+
+	function saberi(prviBroj, drugiBroj) {
+		var rezultat = prviBroj + drugiBroj;
+		console.log(rezultat);
+	}
+
+	function oduzmi (prviBroj, drugiBroj) {
+		var rezultat = prviBroj - drugiBroj;
+		console.log(rezultat);
+	}
+
+
+	nazivFunkcije();
+	saberi(7, 8);
+	oduzmi(15, 5);
+	// var ime = "Jelena";
+	// console.log("Cao!!!");
+	// console.log(ime);
+	
+	// var pozdrav = "Cao, " + ime;
+	// console.log(pozdrav);
+	
+	// var broj1 = "7";
+	// var broj2 = "3";
+	// var rezultat = broj1 - broj2;
+	// console.log(rezultat);
+
+	</script>
 </body>
 </html>
